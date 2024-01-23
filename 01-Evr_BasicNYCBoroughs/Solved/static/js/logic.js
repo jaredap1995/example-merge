@@ -17,3 +17,18 @@ d3.json(link).then(function(data) {
   // Creating a GeoJSON layer with the retrieved data
   L.geoJson(data).addTo(myMap);
 });
+
+// Getting our GeoJSON data
+d3.json(link).then(function(data) {
+  // Creating a GeoJSON layer with the retrieved data
+  L.geoJson(data, {
+    style: function(feature) {
+      return {
+        color: "white",
+        fillColor: chooseColor(feature.properties.borough),
+        fillOpacity: 0.5,
+        weight: 1.5
+      };
+    }
+  }).addTo(myMap);
+});
