@@ -16,6 +16,15 @@ let link = "https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v
 d3.json(link).then(function(data) {
   // Creating a GeoJSON layer with the retrieved data
   L.geoJson(data).addTo(myMap);
+})
+
+// Getting our GeoJSON data
+d3.json(link).then(function(data) {
+  // Creating a GeoJSON layer with the retrieved data
+  L.geoJson(data, {
+    // Passing in our style object
+    style: mapStyle
+  }).addTo(myMap);
 });
 
 // Getting our GeoJSON data
