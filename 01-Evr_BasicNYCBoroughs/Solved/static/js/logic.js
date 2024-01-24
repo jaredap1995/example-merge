@@ -42,3 +42,4 @@ d3.json(link).then(function(data) {
   }).addTo(myMap);
 });
 
+console.log('hello world')
