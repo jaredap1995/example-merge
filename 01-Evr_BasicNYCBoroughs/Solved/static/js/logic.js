@@ -42,3 +42,12 @@ d3.json(link).then(function(data) {
   }).addTo(myMap);
 });
 
+// The function that will determine the color of a neighborhood based on the borough that it belongs to
+function chooseColor(borough) {
+  if (borough == "Brooklyn") return "yellow";
+  else if (borough == "Bronx") return "red";
+  else if (borough == "Manhattan") return "orange";
+  else if (borough == "Queens") return "green";
+  else if (borough == "Staten Island") return "purple";
+  else return "black";
+}
