@@ -53,3 +53,4 @@ function chooseColor(borough) {
   else return "black";
 }
 
+console.log('hello i have made some erros in my code')
