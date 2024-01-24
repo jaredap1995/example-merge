@@ -51,3 +51,11 @@ function chooseColor(borough) {
   else if (borough == "Staten Island") return "purple";
   else return "black";
 }
+
+// Our style object
+let mapStyle = {
+  color: "white",
+  fillColor: "pink",
+  fillOpacity: 0.5,
+  weight: 1.5
+};
